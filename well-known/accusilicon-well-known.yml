@@ -1,0 +1,52 @@
+generated: '2026-09-06'
+method: probed
+source: live HTTPS probes of every host this record knows
+note: >-
+  Accusilicon publishes no API, so the only host in this record is its corporate marketing
+  site. Every named discovery path was requested and every one returned HTTP 404 from the
+  origin (nginx/openresty, 552-byte "404 Not Found" body) — a recorded absence, not a gap in
+  the probe. No WellKnown or SecurityTxt pointer is wired into apis.yml because nothing was
+  served. www.accusilicon.com 301-redirects to the apex host and was therefore not probed as
+  a separate origin. accusilicon.com.cn and accusilicon.cn resolve but the origin returns 404
+  at the root (accusilicon.cn refuses TLS), so neither carries a site to probe.
+hit_count: 0
+path_echo_control: passed
+soft_404_control:
+  path: /.well-known/accusilicon-negative-control-7f3ab91c.json
+  status: 404
+  bytes: 552
+hosts:
+- host: https://accusilicon.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/oauth-protected-resource
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/apis.json
+    status: 404
+  - path: /.well-known/aauth-resource.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+  - path: /apis.json
+    status: 404
+  - path: /apis.yml
+    status: 404
+  - path: /llms.txt
+    status: 404
+  - path: /openapi.json
+    status: 404
+  - path: /swagger.json
+    status: 404
+  - path: /robots.txt
+    status: 404

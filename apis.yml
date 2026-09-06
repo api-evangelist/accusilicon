@@ -1,8 +1,19 @@
 aid: accusilicon
 name: Accusilicon
-description: 'Accusilicon is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Accusilicon (Guangzhou Ruixin Microelectronics Co., Ltd. / 广州睿芯微电子有限公司) is a
+  fabless mixed-signal semiconductor company founded in July 2014 and headquartered in the Huangpu
+  district of Guangzhou, China, with additional sites in Xi''an and Shanghai. It designs and sells
+  ultra-low phase noise timing silicon and related analog ICs — XO/VCXO/TCXO and OCXO oscillator
+  chips, clock ICs, crystal-oscillator modules, RF and analog switch ICs, mobile-interface protection
+  ICs, ADC/DAC converters, digital audio processor (DSP) and audio ICs, and spectral image sensor
+  chips — alongside clock stability analyzers and other test and measurement instruments, and ASIC/SoC,
+  module, system and clock custom design services. Its parts are used in smartphones, digital
+  communications and high-speed Ethernet, audio/video and professional audiophile equipment, medical,
+  security, payment and measurement systems. The company is a hardware component supplier: it operates
+  a corporate marketing site in Chinese only and publishes no developer program, developer portal, API
+  documentation, SDK or machine-readable API description of any kind.'
 url: https://raw.githubusercontent.com/api-evangelist/accusilicon/refs/heads/main/apis.yml
+image: https://accusilicon.com/images/logo.svg
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +23,14 @@ created: '2026-09-06'
 modified: '2026-09-06'
 tags:
 - Company
+- Semiconductors
+- Integrated Circuits
+- Clock Chips
+- Oscillators
+- Timing
+- Audio
+- Hardware
+- Electronics
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,35 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/accusilicon-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/accusilicon
+  url: https://accusilicon.com/
+- type: TermsOfService
+  url: https://accusilicon.com/cn/accusilicon/terms_conditions
+- type: Support
+  url: https://accusilicon.com/cn/accusilicon/contact_us
+- type: LLMsTxt
+  url: llms/accusilicon-llms.txt
+x-enrichment:
+  date: '2026-09-06'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Accusilicon is a fabless oscillator and mixed-signal chip maker whose only web property is a
+    Chinese-language product marketing site with no developer section — its /en/ locale, /llms.txt,
+    /openapi.json, /apis.json and every /.well-known/ discovery path all 404 at the origin.
+  evidence:
+  - url: https://accusilicon.com/cn/accusilicon/about_us
+    status: 200
+  - url: https://accusilicon.com/openapi.json
+    status: 404
+  - url: https://accusilicon.com/.well-known/api-catalog
+    status: 404
+  - url: https://accusilicon.com/en/
+    status: 404
+  checked: '2026-09-06'
